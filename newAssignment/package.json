@@ -1,0 +1,21 @@
+{
+  "name": "newAssignment",
+  "version": "1.0.0",
+  "main": "masterserver.js",
+  "dependencies": {
+    "async": "^2.1.5",
+    "ejs": "^2.5.6",
+    "express": "^4.14.1",
+    "fs": "0.0.1-security",
+    "mongodb": "^1.4.0",
+    "nosql": "^5.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

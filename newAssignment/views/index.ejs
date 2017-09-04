@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+<% for (var i=0; i < result.length; i++) { %>
+    <% if (result[i].status == 200 ) { %> 
+        <%- include('partials/green-alert') %>
+     <% } else { %>
+        <%- include('partials/red-alert') %>
+    <% } %>
+<% } %>
+<% for (var i=0; i < result.length; i++) { %>
+    <% if (result[i].status == 200 ) { %> 
+        <div class ="item Green-Server" >          
+            <p align = "center" ><strong>Hostname:</strong>  <%= result[i].hostname %>  </p></br> <p align = "center" ;><strong>Portnumber:</strong> <%= result[i].portnumber %>  </p> </br>  <p align = "center";><strong>Status:</strong>  <%= result[i].status %>  </p>
+        </div>
+    <% } else { %>
+        <div class = "item Red-Server"  >
+            <p align = "center"><strong>Hostname:</strong>  <%= result[i].hostname %> </p></br> <p align = "center";><strong>Portnumber: </strong> <%= result[i].portnumber %>  </p> </br>  <p  align = "center" ;><strong>Status:</strong>  <%= result[i].status %> </p>
+        </div>
+    <% } %>
+<% } %>
+<%- include('partials/footer') %>

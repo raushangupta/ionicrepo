@@ -1,0 +1,61 @@
+<html> 
+    <head>
+        <link rel="shortcut icon" href="http://www.domain.com/favicon.ico" type="image/x-icon" />
+       <title>
+            Server checker 
+        </title>
+        <style>
+            body {
+                background-color: #58D68D   ;
+            }
+            .header {
+                width:1210px;
+            }
+            .down {
+                background-color: #ffdddd;
+                border-left: 50px solid #f44336;
+            }
+
+            .up {
+                background-color: #ddffdd;
+                border-left: 50px solid #4CAF50;
+            }    
+            #refresh {
+                width:97%;   
+            }
+            div {
+                background-color: #58D68D   ;
+                border-radius:5px;
+                padding: 20px;
+                font-family: 'Luckiest Guy', cursive;
+            }
+            div.Green-Server {
+                background-color: #008000;
+                height:auto;
+            }
+            div.Red-Server {
+                background-color: #FF0000;
+                height:auto;
+            }
+            .item{
+                width: 16%;
+                border: 1px solid;
+                display: inline-block;
+                font-size:auto;
+                font-family: 'Luckiest Guy', cursive;
+            }
+        </style>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script> 
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $('#refresh').load('/status');
+            var auto_refresh = setInterval( function() { 
+                $('#refresh').fadeOut("slow").load('/status').fadeIn("slow");
+            },30000);
+        });
+    </script>
+    </head> 
+<body> 
+    <div id="refresh" ></div> 
+</body> 
+</html>
